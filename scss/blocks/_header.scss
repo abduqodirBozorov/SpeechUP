@@ -1,0 +1,32 @@
+.site-header {
+  background-color: $main-color;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+}
+.logo-link {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.nav-item {
+  margin: 0 15px;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-shadow: 0 0 2px #fff;
+  }
+}
