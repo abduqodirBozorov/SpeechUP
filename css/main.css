@@ -521,6 +521,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+  position: relative;
 }
 
 .nav-list {
@@ -537,6 +538,17 @@ img {
   margin: 0 15px;
 }
 
+.hamburger {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  display: none;
+}
+
 .nav-link {
   color: #fff;
   text-decoration: none;
@@ -544,5 +556,31 @@ img {
 
 .nav-link:hover {
   text-shadow: 0 0 2px #fff;
+}
+
+@media only screen and (max-width: 450px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-list--open {
+    display: block;
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    right: 50%;
+    top: 50%;
+    background-color: #05a1e4;
+    padding: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

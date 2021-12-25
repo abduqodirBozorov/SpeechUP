@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  position: relative;
 }
 .nav-list {
   display: flex;
@@ -24,10 +25,40 @@
 .nav-item {
   margin: 0 15px;
 }
+.hamburger {
+  transform: rotate(90deg);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  display: none;
+}
 .nav-link {
   color: #fff;
   text-decoration: none;
   &:hover {
     text-shadow: 0 0 2px #fff;
+  }
+}
+
+@include breakpoint-down(450px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-list--open {
+    display: block;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    align-items: start;
+    right: 50%;
+    top: 50%;
+    background-color: $main-color;
+    padding: 15px;
   }
 }
