@@ -1,0 +1,42 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.hero-text {
+  max-width: 400px;
+}
+
+.hero-heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 60px;
+  color: $heading-color;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 44%;
+  right: -10%;
+}
+
+@include breakpoint-down(736px) {
+  .hero-image {
+    display: none;
+  }
+  .hero-text {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero-heading {
+    font-size: 44px;
+  }
+}
